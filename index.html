@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra como faturar alto vendendo brigadeiros irresistíveis com nosso ebook completo. Receitas, precificação, vendas e mais!">
+    <title>Renda com Brigadeiros - Fature Alto com Doces!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* === Variáveis de Cor (Paleta Refinada) === */
+        :root {
+            --primary-color: #8B5E3C; /* Marrom mais quente (caramelo/chocolate ao leite) */
+            --secondary-color: #F58A4B; /* Laranja mais suave e convidativo */
+            --accent-color: #FFC107; /* Amarelo dourado vibrante */
+            --text-color: #4A3F35; /* Tom de marrom escuro para texto principal */
+            --text-color-light: #756A60; /* Tom mais claro para textos secundários */
+            --bg-color-light: #FFFBF5; /* Fundo creme/off-white muito suave */
+            --bg-color-white: #FFFFFF;
+            --bg-alternate: #FAF6F0; /* Alternativa de fundo ligeiramente mais escura que o creme */
+            --footer-bg: #F5F2ED; /* Fundo do rodapé suave */
+            --success-color: #4CAF50; /* Verde sucesso (ligeiramente mais suave) */
+            --danger-color: #E57373; /* Vermelho perigo mais suave */
+            --shadow-color: rgba(139, 94, 60, 0.1); /* Sombra baseada na cor primária */
+
+            --font-primary: 'Poppins', sans-serif;
+        }
+
+        /* === Reset Básico e Estilos Globais === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px; /* Base para REM */
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-color);
+            background-color: var(--bg-color-white); /* Fundo branco como base */
+            line-height: 1.7;
+            overflow-x: hidden;
+            /* Fundo sutil (mantido, mas com cor ajustada) */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B5E3C' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1160px; /* Leve aumento para mais espaço */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            margin-bottom: 1.8rem; /* Mais espaço abaixo dos títulos */
+            color: var(--primary-color);
+            line-height: 1.3;
+        }
+
+        h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); } /* Tamanho responsivo */
+        h2 { font-size: clamp(1.9rem, 4vw, 2.5rem); text-align: center; margin-bottom: 4.5rem; } /* Mais margem inferior */
+        h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); }
+
+        p {
+            margin-bottom: 1.6rem; /* Mais espaço abaixo dos parágrafos */
+            color: var(--text-color-light);
+            font-size: clamp(1rem, 2vw, 1.1rem); /* Tamanho responsivo levemente maior */
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px; /* Bordas mais suaves como padrão */
+        }
+
+        .highlight {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        section {
+            padding: clamp(5rem, 10vw, 7rem) 0; /* Padding vertical responsivo aumentado */
+            position: relative;
+            overflow: hidden; /* Evita barras de rolagem indesejadas de animações/formas */
+        }
+        /* Alternar cor de fundo das seções */
+        section:nth-of-type(even) {
+             background-color: var(--bg-alternate);
+        }
+        /* Fundo da seção Hero com gradiente suave */
+        section#inicio {
+            background: linear-gradient(180deg, var(--bg-color-light) 80%, var(--bg-color-white) 100%);
+        }
+        /* Fundo da seção CTA Final com gradiente refinado */
+        section#cta-final {
+            background: linear-gradient(135deg, var(--primary-color), #a87a5a); /* Gradiente mais suave */
+            color: var(--bg-color-white);
+        }
+
+
+        /* === Header === */
+        .header {
+            background-color: rgba(255, 251, 245, 0.9); /* Fundo creme semi-transparente */
+            backdrop-filter: blur(8px); /* Efeito de vidro mais pronunciado */
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(139, 94, 60, 0.05); /* Sombra suave */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .header.scrolled {
+             box-shadow: 0 4px 15px rgba(139, 94, 60, 0.08); /* Sombra mais definida no scroll */
+             background-color: rgba(255, 251, 245, 0.98); /* Fica quase opaco no scroll */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none;}
+        .logo-icon { font-size: 2.3rem; color: var(--accent-color); } /* Ícone ligeiramente maior */
+        .logo-text { font-size: 1.7rem; font-weight: 700; color: var(--primary-color); margin: 0; }
+        .logo-text .highlight { color: var(--secondary-color); }
+        .slogan { display: none; } /* Removido para simplificar */
+
+        /* Navegação */
+        .nav-menu ul { list-style: none; display: flex; align-items: center; } /* Alinha itens verticalmente */
+        .nav-menu li { margin-left: 2.8rem; } /* Mais espaço */
+        .nav-menu a {
+            font-weight: 600;
+            color: var(--primary-color);
+            padding-bottom: 8px;
+            position: relative;
+            font-size: 1rem; /* Tamanho ligeiramente maior */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+        .nav-menu a:hover {
+             color: var(--secondary-color);
+        }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        .nav-menu a:hover::after, .nav-menu a.active::after {
+            width: 100%;
+        }
+        /* Botão CTA na Navegação */
+        .nav-menu .nav-cta {
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            color: var(--bg-color-white) !important; /* Garante texto branco */
+            padding: 10px 25px; /* Padding ajustado */
+            border-radius: 30px; /* Raio consistente */
+            font-weight: 700;
+            font-size: 0.95rem; /* Tamanho ajustado */
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 138, 75, 0.25); /* Sombra sutil do laranja */
+            margin-left: 2.8rem; /* Mantém o espaçamento */
+        }
+        .nav-menu .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(245, 138, 75, 0.35);
+            color: var(--bg-color-white) !important; /* Garante texto branco no hover */
+        }
+        .nav-menu .nav-cta::after { /* Remove a linha de baixo do botão */
+             display: none;
+        }
+
+
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.9rem; color: var(--primary-color); cursor: pointer; }
+
+        /* === Hero Section === */
+        .hero-section {
+            padding-top: 8rem; /* Mais espaço no topo */
+            padding-bottom: 10rem; /* Mais espaço abaixo */
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content { flex: 1; padding-right: 4rem; position: relative; z-index: 2; } /* Mais padding */
+        .hero-content h1 { margin-bottom: 1.8rem; line-height: 1.25; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 3rem; max-width: 600px; color: var(--text-color-light); } /* Texto um pouco maior e mais escuro */
+
+        .hero-image { flex: 1; text-align: center; position: relative; z-index: 1; }
+
+        /* Animação flutuante */
+        @keyframes float { 0% { transform: translatey(0px); } 50% { transform: translatey(-15px); } 100% { transform: translatey(0px); } }
+
+        /* Moldura da Imagem */
+        .image-frame-wrapper {
+            display: inline-block; padding: 18px; background-color: #fff; /* Padding maior */
+            border: 1px solid #eee; border-radius: 40px; /* Mais arredondado */
+            box-shadow: 0 12px 35px rgba(139, 94, 60, 0.15); /* Sombra mais pronunciada */
+            line-height: 0;
+        }
+        .image-frame-wrapper img { display: block; border-radius: 30px; } /* Raio interno */
+
+        .hero-image .image-frame-wrapper {
+            max-width: 90%; margin: 0 auto; animation: float 4s ease-in-out infinite; /* Animação mais lenta e suave */
+        }
+
+        /* Botão CTA Genérico */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            color: var(--bg-color-white) !important; /* Garante cor do texto */
+            padding: 18px 45px; /* Botão maior e mais largo */
+            border-radius: 30px; /* Raio consistente */
+            font-weight: 700;
+            font-size: 1.2rem; /* Tamanho da fonte */
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+            box-shadow: 0 7px 25px rgba(245, 138, 75, 0.3); /* Sombra mais visível */
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            background-size: 200% auto;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.03); /* Efeito de levantar mais sutil */
+            box-shadow: 0 14px 35px rgba(245, 138, 75, 0.4); /* Sombra mais intensa no hover */
+            background-position: right center;
+            color: var(--bg-color-white) !important;
+        }
+        .intro-cta { margin-top: 2rem; } /* Mais espaço acima do botão inicial */
+
+        /* Divisor de Forma */
+        .custom-shape-divider-bottom-1700000000 { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); z-index: 0; }
+        .custom-shape-divider-bottom-1700000000 svg { position: relative; display: block; width: calc(100% + 1.3px); height: 110px; } /* Mais alto */
+        .custom-shape-divider-bottom-1700000000 .shape-fill { fill: var(--bg-alternate); } /* Cor da próxima seção */
+
+        /* === Benefits Section === */
+        .benefits-section { background-color: var(--bg-alternate); }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 3.5rem; margin-top: 5rem; } /* Gap e margem maiores */
+        .benefit-item {
+            background-color: var(--bg-color-white); padding: 3rem 2.5rem; text-align: center;
+            border-radius: 24px; /* Bordas mais suaves */
+            box-shadow: 0 10px 30px var(--shadow-color); border: 1px solid #eee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .benefit-item:hover { transform: translateY(-10px); box-shadow: 0 18px 40px rgba(139, 94, 60, 0.18); border-color: var(--secondary-color); } /* Efeito hover mais pronunciado */
+        .benefit-icon {
+            font-size: 3rem; /* Ícone maior */
+            color: var(--secondary-color); margin-bottom: 2rem; /* Mais espaço abaixo */
+            display: inline-flex; justify-content: center; align-items: center;
+            background: linear-gradient(135deg, var(--bg-color-light), #fff);
+            width: 100px; height: 100px; border-radius: 50%; /* Tamanho maior */
+            box-shadow: 0 6px 18px rgba(245, 138, 75, 0.25); transition: transform 0.4s ease;
+        }
+        .benefit-item:hover .benefit-icon { transform: scale(1.1) rotate(10deg); } /* Rotação mais sutil */
+        .benefit-item h3 { color: var(--primary-color); margin-bottom: 1.2rem; font-size: 1.5rem; } /* Título maior */
+        .benefit-item p { font-size: 1.05rem; color: var(--text-color-light); flex-grow: 1; }
+
+        /* === Calculator Section === */
+        .calculator-section { background-color: var(--bg-color-white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .calculator-container {
+            max-width: 1050px; margin: 0 auto; padding: 4rem; background-color: var(--bg-color-white); /* Mais padding */
+            border-radius: 24px; /* Bordas suaves */
+            box-shadow: 0 18px 50px rgba(139, 94, 60, 0.12); /* Sombra mais suave e ampla */
+            display: flex; gap: 4rem; align-items: flex-start; /* Mais gap */
+        }
+        .calculator-form-wrapper { flex: 1; text-align: left; }
+        .calculator-form-wrapper h2, .calculator-form-wrapper .description { text-align: center; }
+        .calculator-form-wrapper h2 { margin-bottom: 1.5rem; }
+        .calculator-form-wrapper .description { margin-bottom: 3.5rem; color: var(--text-color-light); font-size: 1.15rem; } /* Texto maior */
+        .calculator-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; } /* Mais gap e margem */
+        .form-group label { display: block; margin-bottom: 0.8rem; font-weight: 600; color: var(--primary-color); font-size: 1rem; } /* Label maior */
+        .form-group input[type="number"] {
+            width: 100%; padding: 16px 20px; border: 1px solid #ccc; border-radius: 14px; /* Mais padding e borda suave */
+            font-size: 1.05rem; font-family: var(--font-primary); transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input[type="number"]:focus { border-color: var(--secondary-color); box-shadow: 0 0 0 4px rgba(245, 138, 75, 0.15); outline: none; } /* Foco com cor secundária */
+        .form-group input[type="number"]::placeholder { color: #bbb; opacity: 1; }
+        .calculator-results-wrapper { flex-basis: 350px; display: flex; flex-direction: column; align-items: center; padding-top: 2rem; } /* Base maior */
+        .calculator-result {
+            background-color: #E8F5E9; /* Verde claro suave */
+            padding: 2.5rem; border-radius: 24px; margin-bottom: 2.5rem; /* Mais padding e borda suave */
+            border: 1px solid #C8E6C9; text-align: center; width: 100%;
+        }
+        .calculator-result p { margin: 0 0 1rem 0; font-size: 1.2rem; color: var(--primary-color); font-weight: 600;} /* Texto maior */
+        .calculator-result #monthly-profit { display: block; font-size: 3rem; font-weight: 700; color: var(--success-color); margin-top: 0.5rem; word-wrap: break-word; transition: color 0.3s ease; } /* Lucro maior */
+        /* Visualização do Lucro */
+        .profit-visualization { width: 100%; margin-bottom: 2.5rem; }
+        .profit-visualization p { font-size: 1rem; color: var(--text-color-light); margin-bottom: 1rem; text-align: center; }
+        .profit-bar-container { height: 40px; background-color: #f0f0f0; border-radius: 20px; overflow: hidden; position: relative; border: 1px solid #ddd; } /* Barra mais alta */
+        .profit-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--success-color), #81C784); border-radius: 20px 0 0 20px; transition: width 0.6s ease-out; position: relative; } /* Gradiente verde */
+        .profit-bar::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%); border-radius: 20px 0 0 20px; } /* Efeito brilho */
+        /* Dicas Contextuais */
+        .contextual-tips { background-color: #FFF8E1; border: 1px dashed var(--accent-color); padding: 1.5rem; border-radius: 18px; font-size: 1rem; color: var(--text-color-light); width: 100%; min-height: 80px; text-align: center; } /* Fundo amarelo claro */
+        .contextual-tips i { color: var(--accent-color); margin-right: 10px; }
+        #profit-tip { font-style: italic; }
+
+        /* === Ebook Preview Section === */
+        .ebook-preview-section { background-color: var(--bg-alternate); text-align: center; }
+        .ebook-preview-content { display: flex; flex-direction: column; align-items: center; gap: 3.5rem; } /* Mais gap */
+        .ebook-image { max-width: 350px; margin: 0 auto 1rem auto; } /* Tamanho mantido, pode ajustar se tiver imagem real */
+        .ebook-image .image-frame-wrapper { transition: transform 0.3s ease; box-shadow: 0 15px 40px rgba(139, 94, 60, 0.18); } /* Sombra mais pronunciada */
+        .ebook-image .image-frame-wrapper:hover { transform: scale(1.04); } /* Efeito hover mais sutil */
+        .ebook-text h2 { margin-bottom: 1.5rem; }
+        .ebook-text p { max-width: 700px; margin: 0 auto 2.5rem auto; font-size: 1.15rem; } /* Texto maior */
+
+        /* === About Author Section === */
+        .about-section { background-color: var(--bg-color-white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .about-content { display: flex; align-items: center; gap: 3rem; }
+        /* .about-image { flex-basis: 300px; text-align: center; } REMOVIDO */
+        /* .about-image img { ... } REMOVIDO */
+        .about-text { flex: 1; text-align: center; max-width: 850px; margin: 0 auto; } /* Centraliza texto, largura maior */
+        .about-text h2 { text-align: center; margin-bottom: 1.5rem; }
+        .about-text h3 { font-size: 1.4rem; color: var(--secondary-color); margin-bottom: 1.8rem; font-weight: 600; } /* Subtítulo maior */
+        .about-text p { text-align: justify; font-size: 1.1rem; margin-bottom: 1.2rem; } /* Texto justificado e maior */
+
+        /* === Testimonials Section === */
+        .testimonials-section { background: linear-gradient(180deg, var(--bg-alternate) 0%, var(--bg-color-light) 15%, var(--bg-color-light) 85%, var(--bg-alternate) 100%); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 3rem; margin-top: 5rem; } /* Gap e margem maiores */
+        .testimonial-card {
+            background-color: var(--bg-color-white); padding: 3.5rem 3rem; border-radius: 24px; /* Mais padding e borda suave */
+            box-shadow: 0 12px 35px rgba(139, 94, 60, 0.1); display: flex; flex-direction: column; /* Sombra mais suave */
+            align-items: center; text-align: center; border-left: 10px solid var(--accent-color); /* Borda amarela mais grossa */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;
+        }
+        .testimonial-card:hover { transform: scale(1.03); box-shadow: 0 18px 45px rgba(139, 94, 60, 0.15); } /* Efeito hover mais sutil */
+        .testimonial-card img.author-photo {
+            width: 110px; height: 110px; border-radius: 50%; margin-bottom: 2rem; /* Foto maior, mais margem */
+            border: 6px solid var(--secondary-color); object-fit: cover; /* Borda laranja */
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); position: relative; z-index: 2;
+        }
+        .testimonial-card blockquote { font-style: italic; color: #666; margin-bottom: 1.8rem; position: relative; padding: 0 1rem; z-index: 1; font-size: 1.1rem; line-height: 1.8;} /* Citação maior */
+        .testimonial-card::before {
+            content: '\f10d'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            font-size: 7rem; color: var(--secondary-color); opacity: 0.06; position: absolute; /* Ícone maior, mais sutil */
+            left: 20px; top: 20px; z-index: 0; line-height: 1;
+        }
+        .testimonial-card cite { font-weight: 700; color: var(--primary-color); font-style: normal; margin-top: auto; z-index: 1; font-size: 1.05rem; } /* Nome maior */
+        .disclaimer { text-align: center; font-size: 0.95rem; color: #aaa; margin-top: 5rem; } /* Disclaimer mais sutil */
+
+        /* === FAQ Section === */
+        .faq-section { background-color: var(--bg-alternate); }
+        .faq-container { max-width: 900px; margin: 5rem auto 0 auto; } /* Largura e margem maiores */
+        .faq-item { border-bottom: 1px solid #ddd; margin-bottom: 1.8rem; } /* Mais espaço entre itens */
+        .faq-question {
+            background: none; border: none; width: 100%; text-align: left; padding: 1.5rem 0.5rem; /* Mais padding vertical */
+            font-size: 1.3rem; font-weight: 600; color: var(--primary-color); cursor: pointer; /* Fonte maior */
+            display: flex; justify-content: space-between; align-items: center;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover {
+             color: var(--secondary-color); /* Muda cor no hover */
+        }
+        .faq-question i { transition: transform 0.3s ease; color: var(--secondary-color); font-size: 1.2rem; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, padding 0.5s ease-out; padding: 0 1.8rem; color: var(--text-color-light); font-size: 1.05rem; } /* Resposta maior */
+        .faq-item.active .faq-answer { max-height: 400px; padding: 0.5rem 1.8rem 2.5rem 1.8rem; } /* Mais padding inferior quando ativo */
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-item.active .faq-question { color: var(--secondary-color); } /* Cor da pergunta ativa */
+
+        /* === CTA Final Section === */
+        .cta-section { padding: 8rem 0; color: var(--bg-color-white); text-align: center; position: relative; overflow: hidden; } /* Mais padding */
+        .cta-section::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5; z-index: 0; /* Padrão mais sutil */
+        }
+        .cta-content { position: relative; z-index: 1; }
+        .cta-content h2 { color: var(--bg-color-white); font-size: clamp(2.2rem, 5vw, 3rem); margin-bottom: 1.8rem; } /* Título maior */
+        .cta-content h2 .highlight { color: var(--accent-color); }
+        .cta-content p.cta-subheadline { font-size: 1.25rem; margin-bottom: 3.5rem; max-width: 800px; margin-left: auto; margin-right: auto; color: #f0f0f0; } /* Subtítulo maior, cor mais clara */
+
+        /* Botão CTA Final */
+        .final-cta {
+            font-size: 1.5rem; padding: 20px 55px; /* Botão ainda maior */
+            /* Animação de pulso removida para algo mais sutil, talvez apenas no hover */
+             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição padrão */
+        }
+        /* Adiciona animação de volta no hover do botão final */
+         .final-cta:hover {
+            transform: translateY(-6px) scale(1.04); /* Efeito hover consistente */
+            box-shadow: 0 15px 40px rgba(245, 138, 75, 0.45); /* Sombra mais forte no hover */
+        }
+
+        .final-cta i { margin-right: 15px; transition: transform 0.3s ease; } /* Ícone maior, mais margem */
+        .final-cta:hover i { transform: rotate(-10deg) scale(1.1); } /* Animação do ícone no hover */
+        .secure-purchase { margin-top: 3rem; font-size: 1.05rem; color: #e8e8e8; } /* Texto maior */
+        .guarantee-text { margin-top: 1.2rem; font-size: 1.05rem; color: #e8e8e8; font-weight: 600; } /* Texto maior */
+        .secure-purchase i, .guarantee-text i { color: var(--accent-color); margin-right: 10px; } /* Ícones amarelos */
+
+        /* === Footer === */
+        .footer { background-color: var(--footer-bg); color: #888; text-align: center; padding: 3rem 0; font-size: 1rem; border-top: 1px solid #e0e0e0; } /* Padding maior, fonte maior */
+        .footer p { margin-bottom: 0.8rem; color: #888;} /* Ajusta margem e cor do parágrafo no footer */
+        .footer a { color: var(--primary-color); margin: 0 15px; font-weight: 600; } /* Links mais espaçados */
+        .footer a:hover { color: var(--secondary-color); text-decoration: underline; }
+
+        /* === Botão Flutuante (Sticky CTA) === */
+        .sticky-cta-button {
+            position: fixed; bottom: 25px; right: 25px; z-index: 998;
+            background: linear-gradient(45deg, var(--success-color), #66BB6A); /* Gradiente verde */
+            color: white !important; padding: 15px 30px; border-radius: 30px; /* Padding e raio consistentes */
+            font-weight: 700; font-size: 1.05rem; text-transform: uppercase; border: none;
+            cursor: pointer; box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2); /* Sombra ajustada */
+            transition: transform 0.3s ease, opacity 0.4s ease, visibility 0.4s ease, box-shadow 0.3s ease;
+            opacity: 0; visibility: hidden; transform: translateY(20px); letter-spacing: 0.5px;
+        }
+        .sticky-cta-button i { margin-right: 10px; }
+        .sticky-cta-button.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .sticky-cta-button:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); color: white !important; } /* Efeito hover */
+
+        /* === Botão Voltar ao Topo === */
+        .back-to-top {
+            position: fixed; bottom: 95px; right: 25px; display: none;
+            background: var(--secondary-color); color: white !important; width: 50px; height: 50px; /* Tamanho maior */
+            border-radius: 50%; text-align: center; line-height: 50px; font-size: 1.4rem; /* Ícone maior */
+            z-index: 999; transition: all 0.3s ease; opacity: 0; visibility: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra ajustada */
+        }
+        .back-to-top:hover { background: var(--primary-color); color: white !important; transform: translateY(-5px); } /* Efeito hover */
+        .back-to-top.visible { display: block; opacity: 1; visibility: visible; }
+
+
+        /* === Responsividade (Ajustes pontuais podem ser necessários) === */
+         @media (min-width: 769px) {
+             /* Ajustes específicos para Desktop se necessário */
+             .ebook-preview-content { flex-direction: row; text-align: left; gap: 5rem; } /* Mais gap */
+             .ebook-image { max-width: 380px; margin: 0; } /* Imagem do ebook um pouco maior */
+             .ebook-text { flex: 1; }
+             .ebook-text p { margin: 0 0 2.5rem 0; }
+         }
+         @media (max-width: 992px) {
+             /* Ajustes para Tablets */
+             .hero-section { flex-direction: column; text-align: center; padding: 6rem 0 8rem 0; }
+             .hero-content { padding-right: 0; margin-bottom: 4rem; }
+             .hero-image .image-frame-wrapper { max-width: 70%; margin: 0 auto; }
+             h1 { font-size: 2.8rem; }
+             h2 { font-size: 2.2rem; }
+             .custom-shape-divider-bottom-1700000000 svg { height: 90px; }
+             .calculator-container { flex-direction: column; align-items: center; gap: 3rem; padding: 3rem; }
+             .calculator-results-wrapper { flex-basis: auto; width: 100%; max-width: 500px; padding-top: 0; }
+             .about-content { flex-direction: column; text-align: center; }
+             .about-text h2 { text-align: center; }
+         }
+         @media (max-width: 768px) {
+             /* Ajustes para Mobile */
+             html { font-size: 15px; }
+             .header-container { position: relative; }
+             .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--bg-color-light); /* Fundo do menu mobile */ box-shadow: 0 5px 10px rgba(0,0,0,0.1); padding: 1.5rem 0; }
+             .nav-menu.active { display: block; }
+             .nav-menu ul { flex-direction: column; align-items: center; }
+             .nav-menu li { margin: 1.2rem 0; margin-left: 0; }
+             .nav-menu .nav-cta { margin-left: 0; margin-top: 1rem; } /* Ajusta botão no menu mobile */
+             .menu-toggle { display: block; }
+             h1 { font-size: 2.2rem; }
+             h2 { font-size: 2rem; margin-bottom: 3.5rem;}
+             .benefits-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+             .hero-section { padding: 5rem 0 7rem 0; }
+             .hero-image .image-frame-wrapper { max-width: 80%; }
+             section { padding: 5rem 0; }
+             .cta-content h2 { font-size: 2.2rem; }
+             .cta-content p.cta-subheadline { font-size: 1.15rem; }
+             .final-cta { font-size: 1.3rem; padding: 16px 40px; }
+             .custom-shape-divider-bottom-1700000000 svg { height: 70px; }
+             .logo { flex-direction: row; align-items: center; text-align: left; }
+             .logo-icon { font-size: 2rem; margin-right: 8px; margin-bottom: 0;}
+             .logo-text { font-size: 1.5rem; }
+             .calculator-container { padding: 2.5rem; }
+             .calculator-form { grid-template-columns: 1fr; gap: 1.8rem; }
+             .calculator-result #monthly-profit { font-size: 2.4rem; }
+             .ebook-preview-content { gap: 2.5rem; }
+             .ebook-image { max-width: 300px; }
+             .faq-question { font-size: 1.2rem; }
+             .sticky-cta-button { padding: 14px 25px; font-size: 1rem; right: 20px; bottom: 20px; }
+             .back-to-top { right: 20px; bottom: 85px; width: 45px; height: 45px; line-height: 45px; font-size: 1.2rem; }
+         }
+         @media (max-width: 480px) {
+             /* Ajustes finos para telas menores */
+             html { font-size: 14px; }
+             h1 { font-size: 2rem; }
+             h2 { font-size: 1.8rem; }
+             .cta-button { padding: 14px 30px; font-size: 1.1rem; }
+             .nav-menu .nav-cta { padding: 10px 20px; font-size: 0.9rem;}
+             .final-cta { font-size: 1.2rem; padding: 15px 35px; }
+             .calculator-result #monthly-profit { font-size: 2.1rem; }
+             .testimonial-card { padding: 3rem 2rem; }
+             .testimonial-card blockquote { font-size: 1.05rem; }
+             .footer p { font-size: 0.95rem;}
+             .sticky-cta-button { padding: 12px 22px; font-size: 0.95rem; }
+             .back-to-top { width: 42px; height: 42px; line-height: 42px; font-size: 1.1rem; }
+         }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">
+                <i class="fas fa-mitten logo-icon"></i> <span class="logo-text">Renda com <span class="highlight">Brigadeiros</span></span>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#beneficios">Vantagens</a></li>
+                    <li><a href="#sobre-mim">Quem Sou</a></li>
+                    <li><a href="#depoimentos">Resultados</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                    <li><a href="#cta-final" class="nav-cta">Começar!</a></li> </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container hero-content" data-aos="fade-right">
+                <h1>Sua Cozinha Virou <span class="highlight">Fonte de Renda?</span> Ainda Não? Descubra o Segredo dos Brigadeiros Lucrativos!</h1>
+                <p>Transforme sua paixão por doces (ou a vontade de ter um negócio!) em um fluxo de caixa real. Aprenda o método COMPLETO para criar brigadeiros gourmet que vendem sozinhos e faturar alto, mesmo começando hoje!</p>
+                <a href="#cta-final" class="cta-button intro-cta">Quero Lucrar com Brigadeiros! <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="image-frame-wrapper">
+                    <img src="images/ebook-cover.jpg" alt="Brigadeiros Gourmet Deliciosos e Lucrativos" onerror="this.onerror=null;this.src='https://placehold.co/600x450/8B5E3C/FFFFFF?text=Brigadeiros+Deliciosos'; this.alt='Imagem de brigadeiros deliciosos indisponível';">
+                </div>
+            </div>
+            <div class="custom-shape-divider-bottom-1700000000">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="calculadora" class="calculator-section">
+             <div class="container calculator-container" data-aos="fade-up">
+                 <div class="calculator-form-wrapper">
+                     <h2><span class="highlight">Simule AGORA</span> Seu Potencial de Lucro Mensal!</h2>
+                     <p class="description">Ajuste os campos abaixo com sua realidade (ou use nossos exemplos) e veja o quanto você PODE ganhar vendendo brigadeiros com nosso método validado.</p>
+
+                     <div class="calculator-form">
+                         <div class="form-group">
+                             <label for="preco-venda">Preço Médio (R$):</label>
+                             <input type="number" id="preco-venda" value="15.00" min="0" step="0.10" placeholder="Ex: 15.00">
+                         </div>
+                         <div class="form-group">
+                             <label for="custo-producao">Custo Médio (R$):</label>
+                             <input type="number" id="custo-producao" value="3.00" min="0" step="0.01" placeholder="Ex: 3.00">
+                         </div>
+                         <div class="form-group">
+                             <label for="vendas-hora">Vendas / Hora:</label>
+                             <input type="number" id="vendas-hora" value="10" min="0" placeholder="Ex: 10">
+                         </div>
+                         <div class="form-group">
+                             <label for="horas-dia">Horas / Dia:</label>
+                             <input type="number" id="horas-dia" value="5" min="0" max="24" placeholder="Ex: 5">
+                         </div>
+                         <div class="form-group">
+                             <label for="dias-mes">Dias / Mês:</label>
+                             <input type="number" id="dias-mes" value="25" min="0" max="31" placeholder="Ex: 25">
+                         </div>
+                     </div>
+                     <div style="text-align: center;">
+                         <a href="#cta-final" class="cta-button">Quero Esse Lucro Pra Mim!</a>
+                     </div>
+                 </div>
+
+                 <div class="calculator-results-wrapper">
+                     <div class="calculator-result">
+                         <p>Seu Lucro Mensal Estimado:</p>
+                         <span id="monthly-profit">R$ 0,00</span>
+                     </div>
+
+                     <div class="profit-visualization">
+                         <p>Visualização do Potencial:</p>
+                         <div class="profit-bar-container">
+                             <div id="profit-bar" class="profit-bar"></div>
+                         </div>
+                     </div>
+
+                     <div class="contextual-tips">
+                         <p><i class="fas fa-lightbulb"></i> <strong id="profit-tip-title">Dica de Ouro:</strong></p>
+                         <span id="profit-tip">Preencha os campos e veja a mágica acontecer!</span>
+                     </div>
+                 </div>
+             </div>
+          </section>
+
+        <section id="preview-ebook" class="ebook-preview-section">
+            <div class="container ebook-preview-content" data-aos="zoom-in">
+                <div class="ebook-image">
+                    <div class="image-frame-wrapper">
+                         <img src="images/hero-brigadeiro.jpg" alt="Capa do Ebook Doce Lucro - Renda com Brigadeiros" onerror="this.onerror=null;this.src='https://placehold.co/380x550/A87A5A/FFFFFF?text=Capa+Ebook'; this.alt='Capa do Ebook Renda com Brigadeiros indisponível';">
+                    </div>
+                </div>
+                <div class="ebook-text">
+                    <h2>O Mapa do Tesouro Doce: <span class="highlight">Seu Guia Definitivo!</span></h2>
+                    <p>Chega de tentar adivinhar! Nosso ebook "Renda Com Brigadeiros" é o passo a passo COMPLETO, validado no campo de batalha, que te leva do zero absoluto a um negócio de brigadeiros gourmet altamente lucrativo. Tudo mastigado pra você!</p>
+                    <a href="#cta-final" class="cta-button">Quero o Guia Agora!</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="benefits-section">
+            <div class="container">
+                <h2 data-aos="fade-up">O Que Te Espera Dentro do Ebook <span class="highlight">Renda Com Brigadeiros?</span></h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="benefit-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Receitas Que Viciam</h3>
+                        <p>Sabores exclusivos e pontos perfeitos que farão seus clientes voltarem (e indicarem!).</p>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3>Precificação Sem Erro</h3>
+                        <p>Aprenda a calcular CADA centavo e defina preços justos que maximizam seu lucro real.</p>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Vendas Turbo</h3>
+                        <p>Estratégias de marketing (online e offline) que atraem clientes como abelhas no mel.</p>
+                    </div>
+                     <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                         <div class="benefit-icon"><i class="fas fa-cogs"></i></div>
+                         <h3>Gestão Descomplicada</h3>
+                         <p>Organize sua produção, finanças e pedidos de forma simples e eficiente (adeus, caos!).</p>
+                    </div>
+                     <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">
+                         <div class="benefit-icon"><i class="fas fa-gift"></i></div>
+                         <h3>Bônus Que Valem Ouro</h3>
+                         <p>Planilhas prontas, guia de embalagens, dicas de fotos e muito mais para acelerar seu sucesso.</p>
+                    </div>
+                     <div class="benefit-item" data-aos="fade-up" data-aos-delay="600">
+                         <div class="benefit-icon"><i class="fas fa-camera"></i></div>
+                         <h3>Fotos Que Vendem</h3>
+                         <p>Segredos para tirar fotos incríveis dos seus doces usando apenas o seu celular.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mim" class="about-section">
+            <div class="container" data-aos="fade-up">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>De estudante de direito a <span class="highlight">Empresária de Sucesso</span>: Minha História Real!</h2>
+                        <h3>Isabelle, 23 anos - Criadora do Método Renda Com Brigadeiros</h3>
+                        <p>Oiii, eu sou a Isabelle! Há alguns anos, eu estava exatamente onde você talvez esteja agora: sonhando com independência financeira, mas sem saber por onde começar. Comecei na cozinha de casa, com uma batedeira emprestada e muita vontade de vencer.</p>
+                        <p>Hoje, aos 23 anos, junto com meu marido, transformamos nossa paixão por brigadeiros em um negócio que nos gera mais de <strong class="highlight">R$ 27.000 de lucro líquido mensal</strong>, com duas lojas físicas movimentadas e uma legião de clientes fiéis!</p>
+                        <p>Não foi mágica, foi método! Testei TUDO, errei muito, aprendi mais ainda e compilei cada segredo, cada estratégia vencedora neste ebook. Quero te poupar tempo e dinheiro, te entregando o caminho das pedras para você também construir seu império doce, começando hoje mesmo!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container">
+                <h2 data-aos="fade-up">Resultados REAIS de Quem Aplicou o Método <span class="highlight">Renda Com Brigadeiros!</span></h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-right" data-aos-delay="100">
+                        <img class="author-photo" src="images/photo2.png" alt="Foto de Ana Silva" onerror="this.onerror=null;this.src='https://placehold.co/110x110/cccccc/FFFFFF?text=Ana'; this.alt='Foto de Ana Silva indisponível';">
+                        <blockquote>
+                            "Com as dicas do ebook, saí de um faturamento tímido para mais de R$ 9.000 por mês! As receitas são incríveis e as estratégias de venda funcionam de verdade."
+                        </blockquote>
+                        <cite>Ana Silva - Faturamento: R$ 9.000/mês</cite>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                         <img class="author-photo" src="images/photo1.png" alt="Foto de Carlos Pereira" onerror="this.onerror=null;this.src='https://placehold.co/110x110/cccccc/FFFFFF?text=Carlos'; this.alt='Foto de Carlos Pereira indisponível';">
+                        <blockquote>
+                            "Nunca imaginei que vender brigadeiros poderia ser tão lucrativo. O guia de precificação me salvou! Hoje tenho meu próprio negócio e já penso em expandir."
+                        </blockquote>
+                        <cite>Carlos Pereira - Faturamento: R$ 11.000/mês</cite>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-left" data-aos-delay="300">
+                          <img class="author-photo" src="images/photo3.png" alt="Foto de Mariana Costa" onerror="this.onerror=null;this.src='https://placehold.co/110x110/cccccc/FFFFFF?text=Mariana'; this.alt='Foto de Mariana Costa indisponível';">
+                         <blockquote>
+                            "Estava desempregada e desesperançosa. O Ebook 'Renda com Brigadeiros' foi minha virada de chave. Em 6 meses, já estou faturando R$ 15.000! É surreal!"
+                         </blockquote>
+                         <cite>Mariana Costa - Faturamento: R$ 15.000/mês</cite>
+                    </div>
+                </div>
+                 <p class="disclaimer" data-aos="fade-up" data-aos-delay="400">
+                    *Seus resultados dependem da sua dedicação e aplicação do método. Estes são exemplos reais de alunos, mas não são garantia de ganhos idênticos. O sucesso é construído!
+                 </p>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 data-aos="fade-up">Suas Dúvidas <span class="highlight">Respondidas!</span> (FAQ)</h2>
+                <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Não sei NADA de cozinha, consigo aprender?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Com certeza! O ebook "Renda Com Brigadeiros" foi desenhado do zero. Mesmo que você nunca tenha feito um brigadeiro na vida, vai aprender o ponto certo, as receitas e todas as estratégias passo a passo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Preciso de muito dinheiro para começar?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não! O investimento inicial é surpreendentemente baixo. Provavelmente você já tem panelas e colheres. O foco será nos ingredientes de qualidade, e o ebook te ensina a calcular tudo para começar com o pé direito, sem desperdício.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Em quanto tempo vejo o dinheiro voltar?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Depende do seu ritmo, mas muitos alunos recuperam o valor do ebook (e já lucram!) nas primeiras semanas. Aplicando as dicas de precificação e vendas que ensinamos, o retorno é rápido!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como acesso o ebook depois de comprar?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>É instantâneo! Assim que o pagamento for confirmado, você recebe um e-mail da Hotmart com seu acesso exclusivo. O ebook é digital (PDF) e você pode ler no celular, tablet ou computador, onde e quando quiser.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <button class="faq-question">
+                            E se eu não gostar? Tenho garantia?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Risco ZERO para você. Oferecemos 7 dias de garantia incondicional. Se achar que não é pra você, é só pedir o reembolso dentro do prazo e devolvemos 100% do valor. Simples assim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="cta-final" class="cta-section">
+            <div class="container cta-content" data-aos="zoom-in-up">
+                <h2>Sua Vez de Lucrar (Muito!) Com Brigadeiros Chegou! <span class="highlight">Agarre Essa Chance!</span></h2>
+                <p class="cta-subheadline">Chega de adiar seus sonhos! Adquira AGORA o acesso vitalício ao Ebook "Renda Com Brigadeiros" e comece HOJE a construir sua independência financeira com os doces mais amados do Brasil.</p>
+
+                <a href="https://hotmart.com/pt-br/marketplace/produtos/renda-com-brigadeiros-como-faturar-alto-vendendo-doces-irresistiveis/L99076918X" target="_blank" rel="noopener noreferrer" class="cta-button final-cta">
+                    <i class="fas fa-rocket"></i> Sim, Quero Meu Ebook Agora!
+                </a>
+                <p class="secure-purchase"><i class="fas fa-lock"></i> Compra 100% Segura via Hotmart</p>
+                <p class="guarantee-text"><i class="fas fa-shield-alt"></i> Garantia Blindada de 7 Dias!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Renda com Brigadeiros. Todos os direitos reservados.</p>
+            <p>
+                <a href="#" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> |
+                <a href="#" target="_blank" rel="noopener noreferrer">Termos de Uso</a> |
+                <a href="mailto:contato@seudominio.com">Contato</a> </p>
+        </div>
+    </footer>
+
+    <a href="#cta-final" class="sticky-cta-button">
+         <i class="fas fa-shopping-cart"></i> Quero Lucrar!
+       </a>
+
+    <a href="#inicio" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Inicializa AOS (Animações de Scroll)
+            AOS.init({
+                duration: 800, // Duração da animação
+                once: true, // Animar apenas uma vez
+                offset: 80, // Começar animação um pouco antes do elemento aparecer
+                disable: 'mobile' // Opcional: Desabilitar em mobile para performance
+            });
+
+            // --- Smooth scroll para links internos ---
+            const internalLinks = document.querySelectorAll('a[href^="#"]');
+            internalLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Fecha o menu mobile se estiver aberto
+                        const navMenu = document.querySelector('.nav-menu');
+                        const menuToggle = document.querySelector('.menu-toggle');
+                        if (navMenu && navMenu.classList.contains('active')) {
+                             navMenu.classList.remove('active');
+                             if(menuToggle) {
+                                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                                 menuToggle.setAttribute('aria-label', 'Abrir menu');
+                             }
+                        }
+
+                        // Calcula a posição do scroll considerando o header fixo
+                        const header = document.querySelector('.header');
+                        const headerHeight = header ? header.offsetHeight : 0;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        // Ajuste de offset (-20) para não colar no header
+                        const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
+                        // Opcional: Adiciona classe 'active' ao link do menu correspondente
+                        document.querySelectorAll('.nav-menu a').forEach(navLink => navLink.classList.remove('active'));
+                        if (!this.classList.contains('nav-cta') && !this.classList.contains('intro-cta') && !this.classList.contains('sticky-cta-button') && !this.classList.contains('back-to-top')) {
+                            this.classList.add('active');
+                        }
+                    }
+                });
+            });
+
+            // --- Menu Mobile Toggle ---
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    const isActive = navMenu.classList.contains('active');
+                    this.innerHTML = isActive ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                    this.setAttribute('aria-label', isActive ? 'Fechar menu' : 'Abrir menu');
+                });
+            }
+
+            // --- Header Scroll Effect ---
+            const header = document.querySelector('.header');
+            if(header) {
+                window.addEventListener('scroll', () => {
+                    header.classList.toggle('scrolled', window.scrollY > 50);
+                });
+            }
+
+            // --- Lógica da Calculadora --- START
+            const sellingPriceInput = document.getElementById('preco-venda');
+            const productionCostInput = document.getElementById('custo-producao');
+            const salesPerHourInput = document.getElementById('vendas-hora');
+            const hoursPerDayInput = document.getElementById('horas-dia');
+            const daysPerMonthInput = document.getElementById('dias-mes');
+            const monthlyProfitSpan = document.getElementById('monthly-profit');
+            const profitBar = document.getElementById('profit-bar');
+            const profitTipSpan = document.getElementById('profit-tip');
+            const profitTipTitle = document.getElementById('profit-tip-title');
+
+            const calculatorInputs = [ sellingPriceInput, productionCostInput, salesPerHourInput, hoursPerDayInput, daysPerMonthInput ];
+
+            // Função para gerar dicas baseadas no lucro
+            function getProfitTip(profit) {
+                if (profit <= 0 && (parseFloat(sellingPriceInput?.value) || 0) > 0) return "Atenção! Seu preço de venda pode estar abaixo do custo.";
+                if (profit <= 0) return "Preencha os valores para simular seu lucro!";
+                if (profit < 1500) return "Bom começo! Foque em divulgar e explore as receitas premium do ebook.";
+                if (profit < 4000) return "Excelente potencial! Considere criar combos ou oferecer degustações.";
+                if (profit < 8000) return "Uau! Pense em otimizar a produção ou buscar parcerias locais.";
+                if (profit < 15000) return "Incrível! Você está no caminho certo para um negócio de sucesso. Explore novas estratégias de marketing.";
+                return "Fantástico! Você tem potencial para ser referência em brigadeiros na sua região!";
+            }
+
+            // Função para atualizar a barra de visualização
+            function updateProfitVisualization(profit) {
+                if (!profitBar) return;
+                // Define um teto para a visualização (ajuste conforme necessário)
+                const maxVisualProfit = 15000;
+                let percentage = (profit / maxVisualProfit) * 100;
+                // Garante que a porcentagem fique entre 0 e 100
+                percentage = Math.min(Math.max(percentage, 0), 100);
+                profitBar.style.width = `${percentage}%`;
+            }
+
+            // Função principal para calcular o lucro
+            function calculateProfit() {
+                // Garante que os elementos existem antes de prosseguir
+                 if (!sellingPriceInput || !productionCostInput || !salesPerHourInput || !hoursPerDayInput || !daysPerMonthInput || !monthlyProfitSpan || !profitTipSpan || !profitTipTitle) {
+                    console.error("Um ou mais elementos da calculadora não foram encontrados.");
+                    return;
+                 }
+
+                const sellingPrice = parseFloat(sellingPriceInput.value) || 0;
+                const productionCost = parseFloat(productionCostInput.value) || 0;
+                const salesPerHour = parseInt(salesPerHourInput.value) || 0;
+                const hoursPerDay = parseInt(hoursPerDayInput.value) || 0;
+                const daysPerMonth = parseInt(daysPerMonthInput.value) || 0;
+
+                let monthlyProfit = 0;
+                let isLoss = false;
+
+                // Verifica se há lucro por unidade
+                if (sellingPrice <= productionCost && sellingPrice > 0) {
+                    isLoss = true;
+                } else if (sellingPrice > 0 && productionCost >= 0 && salesPerHour > 0 && hoursPerDay > 0 && daysPerMonth > 0) {
+                    const profitPerUnit = sellingPrice - productionCost;
+                    const monthlySales = salesPerHour * hoursPerDay * daysPerMonth;
+                    monthlyProfit = monthlySales * profitPerUnit;
+                } else {
+                    // Se algum valor for zero ou inválido (exceto custo), o lucro é zero, mas não necessariamente prejuízo
+                    monthlyProfit = 0;
+                }
+
+                // Atualiza a interface
+                monthlyProfitSpan.textContent = isLoss ? "Prejuízo!" : monthlyProfit.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                monthlyProfitSpan.style.color = isLoss ? 'var(--danger-color)' : 'var(--success-color)';
+                profitTipSpan.textContent = getProfitTip(monthlyProfit);
+                profitTipTitle.textContent = isLoss ? "Atenção!" : "Dica de Ouro:";
+                updateProfitVisualization(monthlyProfit);
+            }
+
+            // Adiciona listeners aos inputs
+            calculatorInputs.forEach(input => {
+                if(input) {
+                    input.addEventListener('input', calculateProfit)
+                }
+            });
+            // Calcula o lucro inicial ao carregar a página
+            calculateProfit();
+            // --- Lógica da Calculadora --- END
+
+            // --- Lógica do FAQ (Accordion) --- START
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const questionButton = item.querySelector('.faq-question');
+                if (questionButton) {
+                    questionButton.addEventListener('click', () => {
+                        const currentlyActive = document.querySelector('.faq-item.active');
+                        // Fecha o item ativo se não for o clicado
+                        if (currentlyActive && currentlyActive !== item) {
+                            currentlyActive.classList.remove('active');
+                        }
+                        // Alterna a classe 'active' no item clicado
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+            // --- Lógica do FAQ --- END
+
+            // --- Botões Sticky e Voltar ao Topo --- START
+            const backToTopButton = document.querySelector(".back-to-top");
+            const stickyCtaButton = document.querySelector(".sticky-cta-button");
+            // Distância de scroll para mostrar os botões
+            const showScroll = 400;
+
+             window.addEventListener("scroll", () => {
+                 const shouldShow = window.pageYOffset > showScroll;
+                 if (backToTopButton) backToTopButton.classList.toggle("visible", shouldShow);
+                 if (stickyCtaButton) stickyCtaButton.classList.toggle("visible", shouldShow);
+             });
+            // --- Botões Sticky e Voltar ao Topo --- END
+
+            // --- Atualiza link ativo no menu ao rolar --- START
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', navHighlighter);
+
+            function navHighlighter() {
+                let scrollY = window.pageYOffset;
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 70; // Altura do header
+
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - headerHeight - 50; // Ajuste para ativar um pouco antes
+                    let sectionId = current.getAttribute('id');
+
+                    /* Se passou da seção atual E não chegou ao fim dela */
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active');
+                    } else {
+                        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active');
+                    }
+                });
+
+                // Caso especial para o topo da página (Início)
+                if (scrollY < sections[0].offsetTop - headerHeight - 50) {
+                     document.querySelector('.nav-menu a[href*="inicio"]').classList.add('active');
+                }
+            }
+            // --- Atualiza link ativo no menu ao rolar --- END
+
+        });
+    </script>
+
+</body>
+</html>
