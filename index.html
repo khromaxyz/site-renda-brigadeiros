@@ -108,8 +108,15 @@
         }
         /* Alternar cor de fundo das seções */
         section:nth-of-type(even) {
-             background-color: var(--bg-alternate);
+             background-color: var(--bg-alternate); /* Aplica a cor alternada para seções pares */
         }
+        /* Ajuste para a nova ordem das seções */
+        section#calculadora { background-color: var(--bg-alternate); } /* Agora é a 2ª, deve ser alternada */
+        section#preview-ebook { background-color: var(--bg-color-white); } /* Agora é a 3ª, deve ser branca */
+        section#beneficios { background-color: var(--bg-alternate); } /* Agora é a 4ª, deve ser alternada */
+        section#faq { background-color: var(--bg-color-white); } /* Agora é a 5ª, deve ser branca */
+
+
         /* Fundo da seção Hero com gradiente suave */
         section#inicio {
             background: linear-gradient(180deg, var(--bg-color-light) 80%, var(--bg-color-white) 100%);
@@ -266,10 +273,10 @@
         /* Divisor de Forma */
         .custom-shape-divider-bottom-1700000000 { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); z-index: 0; }
         .custom-shape-divider-bottom-1700000000 svg { position: relative; display: block; width: calc(100% + 1.3px); height: 110px; } /* Mais alto */
-        .custom-shape-divider-bottom-1700000000 .shape-fill { fill: var(--bg-alternate); } /* Cor da próxima seção */
+        .custom-shape-divider-bottom-1700000000 .shape-fill { fill: var(--bg-alternate); } /* Cor da próxima seção (Calculadora) */
 
         /* === Benefits Section === */
-        .benefits-section { background-color: var(--bg-alternate); }
+        /* .benefits-section { background-color: var(--bg-alternate); } */ /* Cor definida pelo :nth-of-type */
         .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 3.5rem; margin-top: 5rem; } /* Gap e margem maiores */
         .benefit-item {
             background-color: var(--bg-color-white); padding: 3rem 2.5rem; text-align: center;
@@ -292,7 +299,7 @@
         .benefit-item p { font-size: 1.05rem; color: var(--text-color-light); flex-grow: 1; }
 
         /* === Calculator Section === */
-        .calculator-section { background-color: var(--bg-color-white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        /* .calculator-section { background-color: var(--bg-alternate); } */ /* Cor definida pelo :nth-of-type */
         .calculator-container {
             max-width: 1050px; margin: 0 auto; padding: 4rem; background-color: var(--bg-color-white); /* Mais padding */
             border-radius: 24px; /* Bordas suaves */
@@ -331,7 +338,7 @@
         #profit-tip { font-style: italic; }
 
         /* === Ebook Preview Section === */
-        .ebook-preview-section { background-color: var(--bg-alternate); text-align: center; }
+        /* .ebook-preview-section { background-color: var(--bg-color-white); text-align: center; } */ /* Cor definida pelo :nth-of-type */
         .ebook-preview-content { display: flex; flex-direction: column; align-items: center; gap: 3.5rem; } /* Mais gap */
         .ebook-image { max-width: 350px; margin: 0 auto 1rem auto; } /* Tamanho mantido, pode ajustar se tiver imagem real */
         .ebook-image .image-frame-wrapper { transition: transform 0.3s ease; box-shadow: 0 15px 40px rgba(139, 94, 60, 0.18); } /* Sombra mais pronunciada */
@@ -339,42 +346,14 @@
         .ebook-text h2 { margin-bottom: 1.5rem; }
         .ebook-text p { max-width: 700px; margin: 0 auto 2.5rem auto; font-size: 1.15rem; } /* Texto maior */
 
-        /* === About Author Section === */
-        .about-section { background-color: var(--bg-color-white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .about-content { display: flex; align-items: center; gap: 3rem; }
-        /* .about-image { flex-basis: 300px; text-align: center; } REMOVIDO */
-        /* .about-image img { ... } REMOVIDO */
-        .about-text { flex: 1; text-align: center; max-width: 850px; margin: 0 auto; } /* Centraliza texto, largura maior */
-        .about-text h2 { text-align: center; margin-bottom: 1.5rem; }
-        .about-text h3 { font-size: 1.4rem; color: var(--secondary-color); margin-bottom: 1.8rem; font-weight: 600; } /* Subtítulo maior */
-        .about-text p { text-align: justify; font-size: 1.1rem; margin-bottom: 1.2rem; } /* Texto justificado e maior */
+        /* === About Author Section (REMOVED) === */
+        /* .about-section { ... } */
+        /* .about-content { ... } */
+        /* .about-text { ... } */
 
-        /* === Testimonials Section === */
-        .testimonials-section { background: linear-gradient(180deg, var(--bg-alternate) 0%, var(--bg-color-light) 15%, var(--bg-color-light) 85%, var(--bg-alternate) 100%); border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 3rem; margin-top: 5rem; } /* Gap e margem maiores */
-        .testimonial-card {
-            background-color: var(--bg-color-white); padding: 3.5rem 3rem; border-radius: 24px; /* Mais padding e borda suave */
-            box-shadow: 0 12px 35px rgba(139, 94, 60, 0.1); display: flex; flex-direction: column; /* Sombra mais suave */
-            align-items: center; text-align: center; border-left: 10px solid var(--accent-color); /* Borda amarela mais grossa */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;
-        }
-        .testimonial-card:hover { transform: scale(1.03); box-shadow: 0 18px 45px rgba(139, 94, 60, 0.15); } /* Efeito hover mais sutil */
-        .testimonial-card img.author-photo {
-            width: 110px; height: 110px; border-radius: 50%; margin-bottom: 2rem; /* Foto maior, mais margem */
-            border: 6px solid var(--secondary-color); object-fit: cover; /* Borda laranja */
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); position: relative; z-index: 2;
-        }
-        .testimonial-card blockquote { font-style: italic; color: #666; margin-bottom: 1.8rem; position: relative; padding: 0 1rem; z-index: 1; font-size: 1.1rem; line-height: 1.8;} /* Citação maior */
-        .testimonial-card::before {
-            content: '\f10d'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
-            font-size: 7rem; color: var(--secondary-color); opacity: 0.06; position: absolute; /* Ícone maior, mais sutil */
-            left: 20px; top: 20px; z-index: 0; line-height: 1;
-        }
-        .testimonial-card cite { font-weight: 700; color: var(--primary-color); font-style: normal; margin-top: auto; z-index: 1; font-size: 1.05rem; } /* Nome maior */
-        .disclaimer { text-align: center; font-size: 0.95rem; color: #aaa; margin-top: 5rem; } /* Disclaimer mais sutil */
 
         /* === FAQ Section === */
-        .faq-section { background-color: var(--bg-alternate); }
+        /* .faq-section { background-color: var(--bg-color-white); } */ /* Cor definida pelo :nth-of-type */
         .faq-container { max-width: 900px; margin: 5rem auto 0 auto; } /* Largura e margem maiores */
         .faq-item { border-bottom: 1px solid #ddd; margin-bottom: 1.8rem; } /* Mais espaço entre itens */
         .faq-question {
@@ -472,8 +451,7 @@
              .custom-shape-divider-bottom-1700000000 svg { height: 90px; }
              .calculator-container { flex-direction: column; align-items: center; gap: 3rem; padding: 3rem; }
              .calculator-results-wrapper { flex-basis: auto; width: 100%; max-width: 500px; padding-top: 0; }
-             .about-content { flex-direction: column; text-align: center; }
-             .about-text h2 { text-align: center; }
+             /* .about-content removido */
          }
          @media (max-width: 768px) {
              /* Ajustes para Mobile */
@@ -487,7 +465,7 @@
              .menu-toggle { display: block; }
              h1 { font-size: 2.2rem; }
              h2 { font-size: 2rem; margin-bottom: 3.5rem;}
-             .benefits-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+             .benefits-grid { grid-template-columns: 1fr; gap: 2.5rem; }
              .hero-section { padding: 5rem 0 7rem 0; }
              .hero-image .image-frame-wrapper { max-width: 80%; }
              section { padding: 5rem 0; }
@@ -516,8 +494,6 @@
              .nav-menu .nav-cta { padding: 10px 20px; font-size: 0.9rem;}
              .final-cta { font-size: 1.2rem; padding: 15px 35px; }
              .calculator-result #monthly-profit { font-size: 2.1rem; }
-             .testimonial-card { padding: 3rem 2rem; }
-             .testimonial-card blockquote { font-size: 1.05rem; }
              .footer p { font-size: 0.95rem;}
              .sticky-cta-button { padding: 12px 22px; font-size: 0.95rem; }
              .back-to-top { width: 42px; height: 42px; line-height: 42px; font-size: 1.1rem; }
@@ -536,11 +512,10 @@
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#calculadora">Calculadora</a></li>
-                    <li><a href="#beneficios">Vantagens</a></li>
-                    <li><a href="#sobre-mim">Quem Sou</a></li>
-                    <li><a href="#depoimentos">Resultados</a></li>
+                    <li><a href="#preview-ebook">O Ebook</a></li> <li><a href="#beneficios">Vantagens</a></li>
                     <li><a href="#faq">Dúvidas</a></li>
-                    <li><a href="#cta-final" class="nav-cta">Começar!</a></li> </ul>
+                    <li><a href="#cta-final" class="nav-cta">Começar!</a></li>
+                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Abrir menu">
                 <i class="fas fa-bars"></i>
@@ -619,7 +594,7 @@
                      </div>
                  </div>
              </div>
-          </section>
+         </section>
 
         <section id="preview-ebook" class="ebook-preview-section">
             <div class="container ebook-preview-content" data-aos="zoom-in">
@@ -656,67 +631,21 @@
                         <p>Estratégias de marketing (online e offline) que atraem clientes como abelhas no mel.</p>
                     </div>
                      <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
-                         <div class="benefit-icon"><i class="fas fa-cogs"></i></div>
+                        <div class="benefit-icon"><i class="fas fa-cogs"></i></div>
                          <h3>Gestão Descomplicada</h3>
                          <p>Organize sua produção, finanças e pedidos de forma simples e eficiente (adeus, caos!).</p>
                     </div>
                      <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">
-                         <div class="benefit-icon"><i class="fas fa-gift"></i></div>
+                        <div class="benefit-icon"><i class="fas fa-gift"></i></div>
                          <h3>Bônus Que Valem Ouro</h3>
                          <p>Planilhas prontas, guia de embalagens, dicas de fotos e muito mais para acelerar seu sucesso.</p>
                     </div>
                      <div class="benefit-item" data-aos="fade-up" data-aos-delay="600">
-                         <div class="benefit-icon"><i class="fas fa-camera"></i></div>
+                        <div class="benefit-icon"><i class="fas fa-camera"></i></div>
                          <h3>Fotos Que Vendem</h3>
                          <p>Segredos para tirar fotos incríveis dos seus doces usando apenas o seu celular.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="sobre-mim" class="about-section">
-            <div class="container" data-aos="fade-up">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>De estudante de direito a <span class="highlight">Empresária de Sucesso</span>: Minha História Real!</h2>
-                        <h3>Isabelle, 23 anos - Criadora do Método Renda Com Brigadeiros</h3>
-                        <p>Oiii, eu sou a Isabelle! Há alguns anos, eu estava exatamente onde você talvez esteja agora: sonhando com independência financeira, mas sem saber por onde começar. Comecei na cozinha de casa, com uma batedeira emprestada e muita vontade de vencer.</p>
-                        <p>Hoje, aos 23 anos, junto com meu marido, transformamos nossa paixão por brigadeiros em um negócio que nos gera mais de <strong class="highlight">R$ 27.000 de lucro líquido mensal</strong>, com duas lojas físicas movimentadas e uma legião de clientes fiéis!</p>
-                        <p>Não foi mágica, foi método! Testei TUDO, errei muito, aprendi mais ainda e compilei cada segredo, cada estratégia vencedora neste ebook. Quero te poupar tempo e dinheiro, te entregando o caminho das pedras para você também construir seu império doce, começando hoje mesmo!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="depoimentos" class="testimonials-section">
-            <div class="container">
-                <h2 data-aos="fade-up">Resultados REAIS de Quem Aplicou o Método <span class="highlight">Renda Com Brigadeiros!</span></h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card" data-aos="fade-right" data-aos-delay="100">
-                        <img class="author-photo" src="images/photo2.png" alt="Foto de Ana Silva" onerror="this.onerror=null;this.src='https://placehold.co/110x110/cccccc/FFFFFF?text=Ana'; this.alt='Foto de Ana Silva indisponível';">
-                        <blockquote>
-                            "Com as dicas do ebook, saí de um faturamento tímido para mais de R$ 9.000 por mês! As receitas são incríveis e as estratégias de venda funcionam de verdade."
-                        </blockquote>
-                        <cite>Ana Silva - Faturamento: R$ 9.000/mês</cite>
-                    </div>
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                         <img class="author-photo" src="images/photo1.png" alt="Foto de Carlos Pereira" onerror="this.onerror=null;this.src='https://placehold.co/110x110/cccccc/FFFFFF?text=Carlos'; this.alt='Foto de Carlos Pereira indisponível';">
-                        <blockquote>
-                            "Nunca imaginei que vender brigadeiros poderia ser tão lucrativo. O guia de precificação me salvou! Hoje tenho meu próprio negócio e já penso em expandir."
-                        </blockquote>
-                        <cite>Carlos Pereira - Faturamento: R$ 11.000/mês</cite>
-                    </div>
-                    <div class="testimonial-card" data-aos="fade-left" data-aos-delay="300">
-                          <img class="author-photo" src="images/photo3.png" alt="Foto de Mariana Costa" onerror="this.onerror=null;this.src='https://placehold.co/110x110/cccccc/FFFFFF?text=Mariana'; this.alt='Foto de Mariana Costa indisponível';">
-                         <blockquote>
-                            "Estava desempregada e desesperançosa. O Ebook 'Renda com Brigadeiros' foi minha virada de chave. Em 6 meses, já estou faturando R$ 15.000! É surreal!"
-                         </blockquote>
-                         <cite>Mariana Costa - Faturamento: R$ 15.000/mês</cite>
-                    </div>
-                </div>
-                 <p class="disclaimer" data-aos="fade-up" data-aos-delay="400">
-                    *Seus resultados dependem da sua dedicação e aplicação do método. Estes são exemplos reais de alunos, mas não são garantia de ganhos idênticos. O sucesso é construído!
-                 </p>
             </div>
         </section>
 
@@ -836,7 +765,7 @@
                              navMenu.classList.remove('active');
                              if(menuToggle) {
                                  menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                                 menuToggle.setAttribute('aria-label', 'Abrir menu');
+                                menuToggle.setAttribute('aria-label', 'Abrir menu');
                              }
                         }
 
@@ -917,8 +846,8 @@
             function calculateProfit() {
                 // Garante que os elementos existem antes de prosseguir
                  if (!sellingPriceInput || !productionCostInput || !salesPerHourInput || !hoursPerDayInput || !daysPerMonthInput || !monthlyProfitSpan || !profitTipSpan || !profitTipTitle) {
-                    console.error("Um ou mais elementos da calculadora não foram encontrados.");
-                    return;
+                     console.error("Um ou mais elementos da calculadora não foram encontrados.");
+                     return;
                  }
 
                 const sellingPrice = parseFloat(sellingPriceInput.value) || 0;
@@ -937,10 +866,10 @@
                     const profitPerUnit = sellingPrice - productionCost;
                     const monthlySales = salesPerHour * hoursPerDay * daysPerMonth;
                     monthlyProfit = monthlySales * profitPerUnit;
-                } else {
+                 } else {
                     // Se algum valor for zero ou inválido (exceto custo), o lucro é zero, mas não necessariamente prejuízo
                     monthlyProfit = 0;
-                }
+                 }
 
                 // Atualiza a interface
                 monthlyProfitSpan.textContent = isLoss ? "Prejuízo!" : monthlyProfit.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -1004,17 +933,35 @@
                     const sectionTop = current.offsetTop - headerHeight - 50; // Ajuste para ativar um pouco antes
                     let sectionId = current.getAttribute('id');
 
-                    /* Se passou da seção atual E não chegou ao fim dela */
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active');
-                    } else {
-                        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active');
+                    // Seleciona o link correspondente à seção atual
+                    const navLink = document.querySelector('.nav-menu a[href*=' + sectionId + ']');
+
+                    if (navLink) { // Verifica se o link existe no menu
+                        /* Se passou da seção atual E não chegou ao fim dela */
+                        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                            // Remove 'active' de outros links antes de adicionar ao atual
+                            document.querySelectorAll('.nav-menu a.active').forEach(link => link.classList.remove('active'));
+                            navLink.classList.add('active');
+                        } else {
+                            navLink.classList.remove('active');
+                        }
                     }
                 });
 
                 // Caso especial para o topo da página (Início)
-                if (scrollY < sections[0].offsetTop - headerHeight - 50) {
-                     document.querySelector('.nav-menu a[href*="inicio"]').classList.add('active');
+                const inicioLink = document.querySelector('.nav-menu a[href*="inicio"]');
+                if (inicioLink && scrollY < sections[0].offsetTop - headerHeight - 50) {
+                     // Remove 'active' de todos os outros links primeiro
+                     document.querySelectorAll('.nav-menu a.active').forEach(link => {
+                         // Não remove do próprio link de início se ele já estiver ativo
+                         if(link !== inicioLink) {
+                             link.classList.remove('active');
+                         }
+                     });
+                     // Adiciona 'active' apenas se não estiver já ativo
+                     if (!inicioLink.classList.contains('active')) {
+                        inicioLink.classList.add('active');
+                     }
                 }
             }
             // --- Atualiza link ativo no menu ao rolar --- END
